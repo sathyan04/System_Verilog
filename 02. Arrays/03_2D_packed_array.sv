@@ -8,5 +8,8 @@ module packed_array();
     
     foreach(array[i])
       $display("Array[%0d]: %0b",i,array[i]);
+  	
+    foreach(array[i,j])
+      $display("Arrray[%0d][%0d]: %b",i,j,array[i][j]);
   end
 endmodule

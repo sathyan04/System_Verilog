@@ -4,7 +4,7 @@ endclass
 
 class child extends parent;
   function void display();
-    $display("Value of data inside child: %0d",data);
+    $display("Value of data inside child: %0d",data); // error will occur
   endfunction
 endclass
 

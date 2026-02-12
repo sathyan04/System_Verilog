@@ -1,16 +1,20 @@
-class handle;
-  string sathyan;
+class testing;
+  bit [3:0] data;
+  function new();
+    data = 4'b1111;
+  endfunction
 endclass
 
-module multi();
+module testing_module();
   initial begin
-    handle s1, s2;
-    s1=new();
-    s1.sathyan = "Hello";
-    $display("\nThis is s1: %s\n",s1.sathyan);
-    s2=s1;
-    $display("\nThis is s2: %s\n",s2.sathyan);
-    s2.sathyan = "World";
-    $display("\nThis is s2: %s\n",s2.sathyan);
+    testing t1, t2;
+    t1 = new();
+    t2 = new();
+    $display("T1 data: %b",t1.data);
+    $display("T2 data: %b",t2.data);
+    t1.data = 4'b0000;
+    t2.data = 4'b1010;
+    $display("T1 data: %b",t1.data);
+    $display("T2 data: %b",t2.data);
   end
 endmodule
